@@ -8,6 +8,9 @@ import {
   ButtonType,
   ContainerAtom,
   IconAtom,
+  InputAtom,
+  TextAtom,
+  Themes,
 } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
@@ -18,6 +21,8 @@ import {
     IconAtom,
     ContainerAtom,
     CommonModule,
+    InputAtom,
+    TextAtom,
   ],
 })
 export class Atoms {
@@ -50,6 +55,20 @@ export class Atoms {
     { name: 'android', size: 4 },
     { name: 'ban', size: 5 },
   ]
+
+  inputSamples: { label: string; placeholder: string; value: string; theme: Themes; disabled: boolean }[] = [
+    { label: 'Vacío', placeholder: 'Buscar...', value: '', theme: 'primary', disabled: false },
+    { label: 'Con valor', placeholder: 'Buscar...', value: 'Angular 20', theme: 'primary', disabled: false },
+    { label: 'Disabled', placeholder: 'Buscar...', value: 'No editable', theme: 'secondary', disabled: true },
+    { label: 'Danger', placeholder: 'Buscar...', value: 'Correo inválido', theme: 'danger', disabled: false },
+  ];
+
+  textSamples: { content: string; variant: 'title' | 'subtitle' | 'body' | 'caption'; theme: Themes }[] = [
+    { content: 'Título principal', variant: 'title', theme: 'dark' },
+    { content: 'Subtítulo del bloque', variant: 'subtitle', theme: 'secondary' },
+    { content: 'Este es un texto de cuerpo para describir una sección.', variant: 'body', theme: 'primary' },
+    { content: 'Texto de ayuda / caption', variant: 'caption', theme: 'info' },
+  ];
 
   onClick(idButton: string){
     alert(`Click en el Boton ${idButton}`);

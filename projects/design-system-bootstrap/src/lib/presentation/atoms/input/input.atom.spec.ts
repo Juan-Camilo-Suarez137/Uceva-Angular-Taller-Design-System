@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { InputAtom } from './input.atom';
+import {
+  MOCK_INPUT_PLACEHOLDER,
+  MOCK_INPUT_VALUE,
+  MOCK_INPUT_THEME_DANGER,
+} from '../../../mocks/input.mocks';
 
 describe('InputAtom', () => {
   let component: InputAtom;
@@ -21,17 +26,17 @@ describe('InputAtom', () => {
   });
 
   it('should render placeholder and current value', () => {
-    component.placeholder = 'Buscar equipo...';
-    component.value = 'Angular';
+    component.placeholder = MOCK_INPUT_PLACEHOLDER;
+    component.value = MOCK_INPUT_VALUE;
     fixture.detectChanges();
 
     const input = fixture.debugElement.query(By.css('input'));
-    expect(input.nativeElement.placeholder).toBe('Buscar equipo...');
-    expect(input.nativeElement.value).toBe('Angular');
+    expect(input.nativeElement.placeholder).toBe(MOCK_INPUT_PLACEHOLDER);
+    expect(input.nativeElement.value).toBe(MOCK_INPUT_VALUE);
   });
 
-  it("should mark input as invalid when theme is danger", () => {
-    component.theme = 'danger';
+  it('should mark input as invalid when theme is danger', () => {
+    component.theme = MOCK_INPUT_THEME_DANGER;
     fixture.detectChanges();
 
     const input = fixture.debugElement.query(By.css('input'));
