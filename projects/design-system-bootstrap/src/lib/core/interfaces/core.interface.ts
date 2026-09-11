@@ -20,6 +20,11 @@ export type BadgeTypeText = 'text-white' | 'text-dark';
 /** Tipo de tema para botones */
 export type ButtonType = Themes;
 
+export type InputType = Themes;
+
+/** Tipo de tema para el color del texto */
+export type TextType = Themes;
+
 /**
  * Configuración de un botón dentro de un grupo de botones.
  */
@@ -67,4 +72,29 @@ export interface NavbarIconConfig {
 
     /** Tamaño del icono en unidades `rem` */
     size: number;
+}
+
+export interface InputConfig {
+  /** Texto de ayuda mostrado cuando el campo está vacío */
+  placeholder?: string;
+  /** Valor actual del input */
+  value: string;
+  /** Tipo HTML del input */
+  type?: 'text' | 'search' | 'email' | 'password';
+  /** Tema visual (ej. borde rojo si theme = 'danger' en validación) */
+  theme?: InputType;
+  /** Si el input está deshabilitado */
+  disabled?: boolean;
+}
+
+/**
+ * Configuración de un bloque de texto tipográfico.
+ */
+export interface TextConfig {
+  /** Contenido textual a mostrar */
+  content: string;
+  /** Variante tipográfica */
+  variant: 'title' | 'subtitle' | 'body' | 'caption';
+  /** Color/tema del texto */
+  theme?: TextType;
 }
