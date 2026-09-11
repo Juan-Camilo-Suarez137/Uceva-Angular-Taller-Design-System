@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="variant">
+  <h1 *ngSwitchCase="'title'" [class]="textClasses">{{ content }}</h1>
+  <h2 *ngSwitchCase="'subtitle'" [class]="textClasses">{{ content }}</h2>
+  <p *ngSwitchCase="'body'" [class]="textClasses">{{ content }}</p>
+  <small *ngSwitchDefault [class]="textClasses">{{ content }}</small>
+</ng-container>
