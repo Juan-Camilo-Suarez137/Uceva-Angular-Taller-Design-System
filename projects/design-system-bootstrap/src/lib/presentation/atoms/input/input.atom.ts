@@ -2,6 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { InputType } from '../../../core/interfaces/core.interface';
 
+/**
+ * Componente visual tipo input del Design System.
+ *
+ * @description
+ * Permite renderizar un campo de texto reutilizable con soporte para
+ * placeholder, valor inicial, tema visual y estado deshabilitado.
+ */
 @Component({
   selector: 'dsb-input-atom',
   standalone: true,

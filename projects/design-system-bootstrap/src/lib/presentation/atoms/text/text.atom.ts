@@ -2,6 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TextType } from '../../../core/interfaces/core.interface';
 
+/**
+ * Componente visual tipo texto del Design System.
+ *
+ * @description
+ * Permite renderizar contenido textual semántico con soporte para
+ * variaciones de tipografía y color según el tema del sistema.
+ */
 @Component({
   selector: 'dsb-text-atom',
   standalone: true,

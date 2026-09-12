@@ -1,5 +1,5 @@
 /**
- * Temas visuales disponibles.
+ * Temas visuales disponibles en el sistema de diseño.
  */
 export type Themes = 
     | 'primary'
@@ -11,18 +11,19 @@ export type Themes =
     | 'light'
     | 'dark';
 
-/** Tipo de tema para badges */
+/** Tipo de tema para badges. */
 export type BadgeType = Themes;
 
-/** Clases de texto disponibles para badges */
+/** Clases de texto disponibles para badges. */
 export type BadgeTypeText = 'text-white' | 'text-dark';
 
-/** Tipo de tema para botones */
+/** Tipo de tema para botones. */
 export type ButtonType = Themes;
 
+/** Tipo de tema para el estado visual del input, por ejemplo validación. */
 export type InputType = Themes;
 
-/** Tipo de tema para el color del texto */
+/** Tipo de tema para el color del texto. */
 export type TextType = Themes;
 
 /**
