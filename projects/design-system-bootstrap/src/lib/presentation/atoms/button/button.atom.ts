@@ -16,6 +16,7 @@ import { ButtonType } from '../../../core/interfaces/core.interface';
       type="button" 
       class="btn"
       [class]="getClass()"
+      [disabled]="disabled"
       (click)="onEmit()">
       {{ text }}
     </button>`,
@@ -29,6 +30,9 @@ export class ButtonAtom {
 
   /** Tipo visual del botón */
   @Input() type: ButtonType = 'primary';
+
+  /** Si el botón está deshabilitado */
+  @Input() disabled: boolean = false;
 
   /**
    * Evento emitido al hacer click en el botón.

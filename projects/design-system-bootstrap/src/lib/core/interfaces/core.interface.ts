@@ -1,5 +1,5 @@
 /**
- * Temas visuales disponibles.
+ * Temas visuales disponibles en el sistema de diseño.
  */
 export type Themes = 
     | 'primary'
@@ -11,14 +11,20 @@ export type Themes =
     | 'light'
     | 'dark';
 
-/** Tipo de tema para badges */
+/** Tipo de tema para badges. */
 export type BadgeType = Themes;
 
-/** Clases de texto disponibles para badges */
+/** Clases de texto disponibles para badges. */
 export type BadgeTypeText = 'text-white' | 'text-dark';
 
-/** Tipo de tema para botones */
+/** Tipo de tema para botones. */
 export type ButtonType = Themes;
+
+/** Tipo de tema para el estado visual del input, por ejemplo validación. */
+export type InputType = Themes;
+
+/** Tipo de tema para el color del texto. */
+export type TextType = Themes;
 
 /**
  * Configuración de un botón dentro de un grupo de botones.
@@ -67,4 +73,57 @@ export interface NavbarIconConfig {
 
     /** Tamaño del icono en unidades `rem` */
     size: number;
+}
+
+export interface InputConfig {
+  /** Texto de ayuda mostrado cuando el campo está vacío */
+  placeholder?: string;
+  /** Valor actual del input */
+  value: string;
+  /** Tipo HTML del input */
+  type?: 'text' | 'search' | 'email' | 'password';
+  /** Tema visual (ej. borde rojo si theme = 'danger' en validación) */
+  theme?: InputType;
+  /** Si el input está deshabilitado */
+  disabled?: boolean;
+}
+
+/**
+ * Configuración de un bloque de texto tipográfico.
+ */
+export interface TextConfig {
+  /** Contenido textual a mostrar */
+  content: string;
+  /** Variante tipográfica */
+  variant: 'title' | 'subtitle' | 'body' | 'caption';
+  /** Color/tema del texto */
+  theme?: TextType;
+}
+
+/**
+ * Representa un elemento individual dentro del panel de resultados.
+ */
+export interface ResultItem {
+  /** Texto principal del ítem (ej. nombre del equipo) */
+  title: string;
+  /** Texto secundario, más descriptivo */
+  subtitle: string;
+  /** Icono de Bootstrap Icons (sin el prefijo bi-) */
+  icon: string;
+  /** Texto de la etiqueta de estado */
+  badgeText: string;
+  /** Color/tema de la etiqueta de estado */
+  badgeType: BadgeType;
+}
+
+/**
+ * Configuración completa del panel de resultados.
+ */
+export interface ResultsPanelConfig {
+  /** Título del panel */
+  title: string;
+  /** Icono principal del panel */
+  icon: string;
+  /** Lista de elementos a mostrar */
+  items: ResultItem[];
 }
