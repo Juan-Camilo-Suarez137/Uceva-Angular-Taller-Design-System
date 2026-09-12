@@ -99,3 +99,31 @@ export interface TextConfig {
   /** Color/tema del texto */
   theme?: TextType;
 }
+
+/**
+ * Representa un elemento individual dentro del panel de resultados.
+ */
+export interface ResultItem {
+  /** Texto principal del ítem (ej. nombre del equipo) */
+  title: string;
+  /** Texto secundario, más descriptivo */
+  subtitle: string;
+  /** Icono de Bootstrap Icons (sin el prefijo bi-) */
+  icon: string;
+  /** Texto de la etiqueta de estado */
+  badgeText: string;
+  /** Color/tema de la etiqueta de estado */
+  badgeType: BadgeType;
+}
+
+/**
+ * Configuración completa del panel de resultados.
+ */
+export interface ResultsPanelConfig {
+  /** Título del panel */
+  title: string;
+  /** Icono principal del panel */
+  icon: string;
+  /** Lista de elementos a mostrar */
+  items: ResultItem[];
+}
