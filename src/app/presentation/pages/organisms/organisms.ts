@@ -34,6 +34,6 @@ export class Organisms {
   };
 
   onSearch(term: string): void {
-    console.log('Búsqueda:', term);
+    alert(`Búsqueda: ${term}`);
   }
 }
