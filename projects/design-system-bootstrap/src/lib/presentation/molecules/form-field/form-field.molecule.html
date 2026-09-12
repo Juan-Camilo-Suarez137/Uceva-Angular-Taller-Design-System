@@ -1,0 +1,17 @@
+<div class="d-grid gap-2">
+  @if (label) {
+    <dsb-text-atom [content]="label" variant="subtitle" [theme]="theme"></dsb-text-atom>
+  }
+
+  <dsb-input-atom
+    [placeholder]="placeholder"
+    [value]="value"
+    [type]="type"
+    [theme]="theme"
+    [disabled]="disabled">
+  </dsb-input-atom>
+
+  @if (helperText) {
+    <dsb-text-atom [content]="helperText" variant="caption" [theme]="theme"></dsb-text-atom>
+  }
+</div>

@@ -1,0 +1,22 @@
+<div class="d-flex align-items-stretch gap-2">
+  <span class="input-group-text d-flex align-items-center">
+    <dsb-icon-atom [icon]="icon"></dsb-icon-atom>
+  </span>
+
+  <dsb-input-atom
+    class="flex-grow-1"
+    [placeholder]="placeholder"
+    [value]="value"
+    [theme]="theme"
+    [disabled]="disabled"
+    [type]="'search'">
+  </dsb-input-atom>
+
+  <dsb-button-atom
+    [idButton]="'search-button'"
+    [text]="buttonText"
+    [type]="theme"
+    [disabled]="disabled"
+    (clicker)="onSearch()">
+  </dsb-button-atom>
+</div>
