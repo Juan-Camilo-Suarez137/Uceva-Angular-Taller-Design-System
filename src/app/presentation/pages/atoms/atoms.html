@@ -26,3 +26,32 @@
         }
     </section>
 </dsb-container-atom>
+
+
+<dsb-container-atom title="Input">
+    <section class="d-grid gap-3">
+      @for (field of inputSamples; track field.label) {
+        <div class="d-flex flex-column gap-2">
+          <label class="fw-semibold">{{ field.label }}</label>
+          <dsb-input-atom
+            [placeholder]="field.placeholder"
+            [value]="field.value"
+            [theme]="field.theme"
+            [disabled]="field.disabled">
+          </dsb-input-atom>
+        </div>
+      }
+    </section>
+  </dsb-container-atom>
+
+  <dsb-container-atom title="Text">
+    <section class="d-grid gap-3">
+      @for (sample of textSamples; track sample.variant) {
+        <dsb-text-atom
+          [content]="sample.content"
+          [variant]="sample.variant"
+          [theme]="sample.theme">
+        </dsb-text-atom>
+      }
+    </section>
+  </dsb-container-atom>
