@@ -1,0 +1,28 @@
+@if (config) {
+  <section class="border rounded p-3 mb-4">
+    <header class="d-flex align-items-center gap-2 mb-3">
+      <dsb-icon-atom [icon]="config.icon" [size]="1.5"></dsb-icon-atom>
+      <h4 class="mb-0">{{ config.title }}</h4>
+    </header>
+
+    <dsb-search-box-molecule
+      [placeholder]="placeholder"
+      (search)="onSearch($event)">
+    </dsb-search-box-molecule>
+
+    <ul class="list-group mt-3">
+      @for (item of config.items; track item.title) {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-2">
+            <dsb-icon-atom [icon]="item.icon" [size]="1.6"></dsb-icon-atom>
+            <div>
+              <dsb-text-atom [content]="item.title" variant="body"></dsb-text-atom>
+              <dsb-text-atom [content]="item.subtitle" variant="caption"></dsb-text-atom>
+            </div>
+          </div>
+          <dsb-badge-atom [text]="item.badgeText" [type]="item.badgeType"></dsb-badge-atom>
+        </li>
+      }
+    </ul>
+  </section>
+}

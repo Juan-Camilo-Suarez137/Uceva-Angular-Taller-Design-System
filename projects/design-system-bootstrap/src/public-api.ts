@@ -21,3 +21,4 @@ export { SearchBoxMolecule } from './lib/presentation/molecules/search-box/searc
 
 //Organisms
 export { NavbarOrganism } from './lib/presentation/organisms/navbar/navbar.organism';
+export { ResultsPanelOrganism } from './lib/presentation/organisms/results-panel/results-panel.organism';
